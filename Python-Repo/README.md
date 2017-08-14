@@ -1,1 +1,2 @@
-This is a Python folder consisting of files from automate everything with python
+At -Automation using python
+cio -checkio
