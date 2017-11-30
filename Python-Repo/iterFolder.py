@@ -10,11 +10,9 @@ files = []
 rootFolder = 'F:/test/'
 for root,directories,filenames in os.walk('F:/Photoshop/'):
     for directory in directories:
-        files.append(os.path.join(root,directory))
+        x = os.path.join(root,directory)
+        subFiles = os.listdir(x)
+        for z in subFiles:
+            shutil.copy(x+'/'+z,rootFolder)
 
-for x in files:
-    subFiles = os.listdir(x)
-    for z in subFiles:
-        shutil.copy(x+'/'+z,rootFolder)
-        
 
