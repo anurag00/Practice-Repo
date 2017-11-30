@@ -16,6 +16,5 @@ for x in files:
     subFiles = os.listdir(x)
     for z in subFiles:
         shutil.copy(x+'/'+z,rootFolder)
-    #shutil.copytree(x,rootFolder)
         
 
