@@ -1,2 +1,1 @@
-At -Automation using python
-cio -checkio
+python practice page
