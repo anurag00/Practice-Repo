@@ -6,13 +6,10 @@ import shutil
 
     only goes one level deep"""
 
-files = []
 rootFolder = 'F:/test/'
 for root,directories,filenames in os.walk('F:/Photoshop/'):
     for directory in directories:
-        x = os.path.join(root,directory)
-        subFiles = os.listdir(x)
+        files = os.path.join(root,directory)
+        subFiles = os.listdir(files)
         for z in subFiles:
-            shutil.copy(x+'/'+z,rootFolder)
-
-
+            shutil.copy(files + '/' + z,rootFolder)
