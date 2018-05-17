@@ -19,7 +19,9 @@ def boxPrint(symbol, width, height):
     print('')
 
 if __name__ == "__main__":
-    
+    '''
+    Create a Box with the dimentions entered
+    '''
     symbol = input("Symbol = ")
     width = input("width = ")
     height = input("height = ")
