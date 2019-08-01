@@ -1,5 +1,5 @@
 #!/bin/bash
-unzip -p "File List DPA-I.docx" > TempDoc.txt
+unzip -p "File List.docx" > TempDoc.txt
 echo "--------------------------------------------------"
 sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g;' TempDoc.txt > TempDoc2.txt
 echo "--------------------------------------------------"
