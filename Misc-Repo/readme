@@ -1,1 +1,4 @@
 Random stuff
+
+Find file using part of a name through command line
+find . -type f -iname "*string*"
