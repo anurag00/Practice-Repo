@@ -27,14 +27,15 @@ def spanThrough(site_url,count):
 			spanThrough(temp,count)
 				
 
-print("Select a website for scraping: ",end='')
-beg_site_url = input()
-print(beg_site_url + " is selected")
+if __name__ == "__main__":
+	print("Select a website for scraping: ",end='')
+	beg_site_url = input()
+	print(beg_site_url + " is selected")
 
-count = 0
-urlList = [beg_site_url]
-urlDoneList=[]
-beg_site_url = urlList.pop()
-urlDoneList.append(beg_site_url)
-spanThrough(beg_site_url,count)
-print("Ending...")
+	count = 0
+	urlList = [beg_site_url]
+	urlDoneList=[]
+	beg_site_url = urlList.pop()
+	urlDoneList.append(beg_site_url)
+	spanThrough(beg_site_url,count)
+	print("Ending...")
