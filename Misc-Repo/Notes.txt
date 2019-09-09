@@ -1,0 +1,25 @@
+_______Twitter api fix______
+
+
+Unfortunately, this isn't currently well documented in the Tweepy docs, but the Status objects returned by Tweepy actually come in three varieties:
+
+    "Basic" tweets (you "Compose" a tweet on Twitter)
+    Retweets (you hit "Retweet" on another person's tweet, but don't add any comment)
+    "Quote" tweets (you hit "Retweet" on another person's tweet and add a comment)
+
+To get the full text for each of these, you need to access the _json property for each Status object (which is a Python dict).
+
+    For "basic" & "quote" tweets <= 140 characters, you can simply use status._json["text"].
+
+    For "basic" & "quote" tweets > 140 characters, you use status._json["extended_tweet"]["full_text"]. In this case, status._json["extended_tweet"] contains a reference to the full non-truncated tweet.
+
+    For retweets (of any length), using status._json["retweeted_status"] will give you a reference to the retweeted tweet
+
+    If the retweeted tweet is <= 140 characters, use status._json["retweeted_status"]["text"]
+
+    If the retweeted tweet is > 140 characters, use status._json["retweeted_status"]["extended_tweet"]["full_text"]
+
+You can find an example of a typical status._json object here for a <= 140 character "basic" tweet.
+
+_______chek site_______
+https://towardsdatascience.com/
