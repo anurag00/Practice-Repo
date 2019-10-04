@@ -2,3 +2,9 @@ Random stuff
 
 Find file using part of a name through command line
 find . -type f -iname "*string*"
+
+List files by last modified
+find . -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
+
+or try this
+ls -haltr
