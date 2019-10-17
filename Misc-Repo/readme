@@ -5,6 +5,9 @@ find . -type f -iname "*string*"
 
 List files by last modified
 find . -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
+%p - file name
+%s - file size
+%t - last modified date
 
 or try this
 ls -haltr
