@@ -40,3 +40,9 @@ for i in range(0, 1400, 100):    # loops 14 times, creates 14 threads
 for downloadThread in downloadThreads:
     downloadThread.join()
 print('Done.')
+
+
+
+
+### Could have also been done with wgen in bash
+### wget http://xkcd.com/{0..1000}.jpg
