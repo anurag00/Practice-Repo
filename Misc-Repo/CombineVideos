@@ -1,0 +1,18 @@
+# Python Code
+
+import os
+
+myfile = open("F:\\Folder\\mylist.txt","w")
+
+for root, dirs, file in os.walk("F:\\Folder\\"):
+    for f in file:
+        if f[-3:] == "txt":
+            continue								# ignoring the text file
+        print(f)
+        myfile.write("file '" + f + "'\n")
+myfile.close()
+
+
+
+#now run ffmpeg in cmd
+ffmpeg -f concat -i input.txt -c copy output.webm
