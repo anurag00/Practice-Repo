@@ -8,7 +8,7 @@ writer2 = csv.writer(file2)
 
 writer1.writerow(['anurag','sethi'])
 writer1.writerow(['anuradha','sethi'])
-writer1.writerow(['anurakana','sethi'])
+writer1.writerow(['anurakna','sethi'])
 writer1.writerow(['anurakana','sethiiiiii'])
 writer1.writerow(['anurakana','pethiiiiii'])
 
