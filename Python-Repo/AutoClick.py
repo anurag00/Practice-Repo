@@ -4,7 +4,7 @@ from pynput.mouse import Button, Controller
 from pynput.keyboard import Listener, KeyCode ,Controller as KeyboardController
 
 #0.07
-delay = 15
+delay = 5
 button = Button.left
 start_stop_key = KeyCode(char='p')
 exit_key = KeyCode(char='o')
@@ -31,11 +31,10 @@ class ClickMouse(threading.Thread):
     def run(self):
         while self.program_running:
             while self.running:
-                #mouse.move, mouse.position and mouse.scroll
+                # mouse.move, mouse.position and mouse.scroll
                 mouse.click(self.button)
                 # for sentence keyboard.type() else keyboard.press and release
-                keyboard.press("l")
-                keyboard.release("l")
+                # keyboard.type("l")
                 time.sleep(self.delay)
             time.sleep(0.1)
 
