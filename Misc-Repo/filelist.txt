@@ -1,0 +1,12 @@
+file '1_scaled.mp4'
+file '2_scaled.mp4'
+file '3_scaled.mp4'
+file '4_scaled.mp4'
+
+scaling 
+
+ffmpeg -i 4.mp4 -vf "scale=720:1280,setdar=0/1" 4_scaled.mp4
+
+merging
+
+ffmpeg -f concat -safe 0 -i filelist.txt -c copy output.mp4
